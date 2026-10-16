@@ -1,0 +1,160 @@
+{
+ "feedVersion": 1,
+ "generatedAt": 1792159359713,
+ "coupons": [
+  {
+   "createdAt": 1792159283668,
+   "score": 2.14,
+   "legs": [
+    {
+     "market": "Çifte Şans",
+     "away": "Al-Garaf",
+     "kickoff": 1792162800000,
+     "selection": "1 ve 0",
+     "dropPct": 9,
+     "odds": 1.22,
+     "openOdds": 1.34,
+     "match": "Karbalaa - Al-Garaf",
+     "matchId": 1064822,
+     "home": "Karbalaa",
+     "marketId": 2
+    },
+    {
+     "market": "Çifte Şans",
+     "away": "KV Waasland Beveren U21",
+     "kickoff": 1792173600000,
+     "selection": "0 ve 2",
+     "dropPct": 11.7,
+     "odds": 1.28,
+     "openOdds": 1.45,
+     "match": "RWD Molenbeek U21 - KV Waasland Beveren U21",
+     "matchId": 1064511,
+     "home": "RWD Molenbeek U21",
+     "marketId": 2
+    },
+    {
+     "market": "Çifte Şans",
+     "away": "West Ham United U21",
+     "kickoff": 1792173600000,
+     "selection": "1 ve 0",
+     "dropPct": 8.4,
+     "odds": 1.31,
+     "openOdds": 1.43,
+     "match": "Norwich City U21 - West Ham United U21",
+     "matchId": 1064968,
+     "home": "Norwich City U21",
+     "marketId": 2
+    }
+   ],
+   "id": "a-20261016-1401-3d4598ab",
+   "rationale": "Karbalaa - Al-Garaf: Ev sahibi yönünde 6 pazar düştü (ÇŞ: 1 ve 0, Handikap 1:0: 1, Deplasman İY A/Ü 0,5: Alt, MS: 1) • RWD Molenbeek U21 - KV Waasland Beveren U21: Deplasman yönünde 4 pazar düştü (ÇŞ: 0 ve 2, Deplasman A/Ü 1,5: Üst, Handikap 0:1: 2, MS: 2) • Norwich City U21 - We"
+  },
+  {
+   "createdAt": 1792159283668,
+   "score": 1.96,
+   "legs": [
+    {
+     "market": "Altı/Üstü 2,5",
+     "away": "Araz Nakhchivan PFK",
+     "kickoff": 1792162800000,
+     "selection": "Alt",
+     "dropPct": 16.2,
+     "odds": 1.45,
+     "openOdds": 1.73,
+     "match": "FK Sumgayit - Araz Nakhchivan PFK",
+     "matchId": 1064819,
+     "home": "FK Sumgayit",
+     "marketId": 34
+    },
+    {
+     "market": "Altı/Üstü 2,5",
+     "away": "Nykoebing",
+     "kickoff": 1792170000000,
+     "selection": "Üst",
+     "dropPct": 15.3,
+     "odds": 1.22,
+     "openOdds": 1.44,
+     "match": "Fremad Amager - Nykoebing",
+     "matchId": 1064668,
+     "home": "Fremad Amager",
+     "marketId": 34
+    },
+    {
+     "market": "Çifte Şans",
+     "away": "Manchester United U21",
+     "kickoff": 1792173600000,
+     "selection": "1 ve 0",
+     "dropPct": 12,
+     "odds": 1.47,
+     "openOdds": 1.67,
+     "match": "Nottingham Forest U21 - Manchester United U21",
+     "matchId": 1064969,
+     "home": "Nottingham Forest U21",
+     "marketId": 2
+    },
+    {
+     "market": "Çifte Şans",
+     "away": "Cork City FC",
+     "kickoff": 1792176300000,
+     "selection": "1 ve 0",
+     "dropPct": 13.4,
+     "odds": 1.23,
+     "openOdds": 1.42,
+     "match": "Kerry FC - Cork City FC",
+     "matchId": 1064827,
+     "home": "Kerry FC",
+     "marketId": 2
+    }
+   ],
+   "id": "a-20261016-1401-723df7c7",
+   "rationale": "Nottingham Forest U21 - Manchester United U21: Ev sahibi yönünde 5 pazar düştü (ÇŞ: 1 ve 0, Ev A/Ü 1,5: Üst, Handikap 1:0: 1, Deplasman A/Ü 1,5: Alt) • Kerry FC - Cork City FC: Ev sahibi yönünde 11 pazar düştü (ÇŞ: 1 ve 0, Deplasman A/Ü 1,5: Alt, Handikap 1:0: 1, Ev A/Ü 1,5: Üst)"
+  },
+  {
+   "createdAt": 1792159283668,
+   "score": 2.02,
+   "legs": [
+    {
+     "market": "Altı/Üstü 2,5",
+     "away": "Sochi",
+     "kickoff": 1792166400000,
+     "selection": "Alt",
+     "dropPct": 8.2,
+     "odds": 1.34,
+     "openOdds": 1.46,
+     "match": "Rotor - Sochi",
+     "matchId": 1064505,
+     "home": "Rotor",
+     "marketId": 34
+    },
+    {
+     "market": "Altı/Üstü 2,5",
+     "away": "US Boulogne",
+     "kickoff": 1792173600000,
+     "selection": "Alt",
+     "dropPct": 9.7,
+     "odds": 1.3,
+     "openOdds": 1.44,
+     "match": "Grenoble - US Boulogne",
+     "matchId": 1064514,
+     "home": "Grenoble",
+     "marketId": 34
+    },
+    {
+     "market": "Altı/Üstü 2,5",
+     "away": "Botosani",
+     "kickoff": 1792173600000,
+     "selection": "Üst",
+     "dropPct": 9.3,
+     "odds": 1.37,
+     "openOdds": 1.51,
+     "match": "D. Bükreş - Botosani",
+     "matchId": 1064788,
+     "home": "D. Bükreş",
+     "marketId": 34
+    }
+   ],
+   "id": "a-20261016-1401-b1de3acd",
+   "rationale": "Grenoble - US Boulogne: Alt/Az gol yönünde 16 pazar düştü (A/Ü 2,5: Alt, KG: Yok, Ev A/Ü 1,5: Alt, İY A/Ü 1,5: Alt) • D. Bükreş - Botosani: Üst/Gollü yönünde 10 pazar düştü (A/Ü 2,5: Üst, Ev A/Ü 1,5: Üst, İY A/Ü 1,5: Üst, KG: Var) • Rotor - Sochi: Alt/Az gol yönünde 5 pazar düştü"
+  }
+ ]
+}
