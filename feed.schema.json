@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/unflixtrt-sketch/oddsdrop-feed/main/feed.schema.json",
+  "title": "OddsDrop coupon feed",
+  "description": "Versioned feed of assistant-generated paper-trading coupons. Simulation only; not betting advice.",
+  "type": "object",
+  "required": ["feedVersion", "generatedAt", "coupons"],
+  "additionalProperties": false,
+  "properties": {
+    "feedVersion": { "const": 1, "description": "Schema version. Apps ignore feeds with a higher version than they support." },
+    "generatedAt": { "type": "integer", "minimum": 1000000000000, "description": "When this file was generated, epoch milliseconds (UTC)." },
+    "coupons": {
+      "type": "array",
+      "maxItems": 500,
+      "items": { "$ref": "#/$defs/coupon" },
+      "description": "Newest last. The publisher keeps only the most recent ~50."
+    },
+    "strategyWeights": {
+      "type": "object",
+      "description": "Optional, reserved for future use (market / odds-range weights). Apps currently only store it.",
+      "properties": {
+        "markets": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0 }, "description": "Market name -> weight." },
+        "oddsRanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["min", "max", "weight"],
+            "properties": { "min": { "type": "number" }, "max": { "type": "number" }, "weight": { "type": "number", "minimum": 0 } },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "coupon": {
+      "type": "object",
+      "required": ["id", "createdAt", "legs"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 120, "description": "Stable unique id. The app imports each id at most once." },
+        "createdAt": { "type": "integer", "minimum": 1000000000000, "description": "Epoch milliseconds (UTC)." },
+        "legs": { "type": "array", "minItems": 3, "maxItems": 12, "items": { "$ref": "#/$defs/leg" }, "description": "Combo coupon: at least 3 legs, each from a different match." },
+        "rationale": { "type": "string", "maxLength": 300 },
+        "score": { "type": "number" }
+      }
+    },
+    "leg": {
+      "type": "object",
+      "required": ["matchId", "match", "kickoff", "market", "marketId", "selection", "odds"],
+      "additionalProperties": false,
+      "properties": {
+        "matchId": { "type": "integer", "minimum": 1, "description": "Site match id (the `id` used by detay26.asp live-score endpoint)." },
+        "match": { "type": "string", "pattern": "^.+ - .+$", "description": "\"Home - Away\"." },
+        "home": { "type": "string", "description": "Optional; if absent the app splits `match` on the first \" - \"." },
+        "away": { "type": "string" },
+        "kickoff": { "type": "integer", "minimum": 1000000000000, "description": "Kick-off, epoch milliseconds (UTC)." },
+        "market": { "type": "string", "minLength": 1, "description": "Market name exactly as the site writes it (e.g. \"Maç Sonucu\", \"Çifte Şans\", \"Altı/Üstü 2,5\"). Must be a market the app can settle." },
+        "marketId": { "type": "integer", "minimum": 0, "description": "Market id as used by degisen26.asp (turId/marketId)." },
+        "selection": { "type": "string", "minLength": 1, "description": "Outcome name as the site writes it (\"1\", \"0\", \"2\", \"Alt\", \"Üst\", \"Var\", \"1 ve 0\", ...)." },
+        "odds": { "type": "number", "exclusiveMinimum": 1, "maximum": 1000, "description": "Decimal odds at generation time; the app uses these as the coupon's odds." },
+        "openOdds": { "type": "number", "exclusiveMinimum": 0, "description": "Optional opening odds." },
+        "dropPct": { "type": "number", "description": "Optional odds drop in percent." }
+      }
+    }
+  }
+}
